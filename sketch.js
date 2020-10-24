@@ -59,8 +59,9 @@ function draw() {
   if (gamestate === "play") {
     spawnBanana();
     spawnob();
-    if (keyIsDown(32)) {
+    if (keyIsDown(32)||touches.length>0) {
       monkey.velocityY=monkey.velocityY-4
+      touches=[]
     }
     ground.velocityX=-5
     if (ground.x < 0){
@@ -102,7 +103,6 @@ function draw() {
               break;
               default:break
     }
-    console.log(monkey.depth)
   }
   drawSprites();
   text("Survival Time: "+score,100,50)
