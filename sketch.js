@@ -61,7 +61,7 @@ function draw() {
     spawnob();
     if (keyIsDown(32)||touches.length>0) {
       monkey.velocityY=monkey.velocityY-4
-      touches=[]
+      touches=[];
     }
     ground.velocityX=-5
     if (ground.x < 0){
